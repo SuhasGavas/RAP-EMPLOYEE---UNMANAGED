@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition for employee - Unmanaged'
+define service Z114_sd_emp_um {
+  expose z114_cemp_um;
+  expose z114_cemp_proj_um;
+}

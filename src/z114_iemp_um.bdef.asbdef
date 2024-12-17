@@ -1,0 +1,27 @@
+unmanaged implementation in class zbp_114_iemp_um unique;
+strict ( 2 );
+
+define behavior for z114_iemp_um alias emp
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) EmpId;
+  association _proj { create; }
+}
+
+define behavior for z114_iemp_proj_um alias proj
+//late numbering
+lock dependent by _emp
+authorization dependent by _emp
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) ProjId, EmpId;
+  association _emp;
+}
