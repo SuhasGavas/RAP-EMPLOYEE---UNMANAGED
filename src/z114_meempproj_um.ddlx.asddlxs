@@ -1,0 +1,37 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{ typeName: 'Project',
+                 typeNamePlural: 'Projects',
+                 title:{ label: 'Project', value: 'ProjectName' } }
+annotate entity z114_cemp_proj_um with
+{
+  @UI.facet: [{ id : 'Project',
+                purpose: #STANDARD,
+                label: 'Project',
+                type: #IDENTIFICATION_REFERENCE,
+                position: 10 }]
+  
+  @UI:{ lineItem: [{ position: 10, label: 'ProjId' }],
+        identification: [{ position: 10, label: 'ProjId' }] }
+  ProjId;
+
+  @UI:{ lineItem: [{ position: 20, label: 'EmpId' }],
+        identification: [{ position: 20, label: 'EmpId' }] }
+  EmpId;
+
+  @UI:{ lineItem: [{ position: 30, label: 'ProjectName' }],
+        identification: [{ position: 30, label: 'ProjectName' }] }
+  ProjectName;
+
+  @UI:{ lineItem: [{ position: 40, label: 'Assignment' }],
+        identification: [{ position: 40, label: 'Assignment' }] }
+  Assignment;
+
+  @UI:{ lineItem: [{ position: 50, label: 'StartDate' }],
+        identification: [{ position: 50, label: 'StartDate' }] }
+  StartDate;
+
+  @UI:{ lineItem: [{ position: 60, label: 'EndDate' }],
+        identification: [{ position: 60, label: 'EndDate' }] }
+  EndDate;
+
+}

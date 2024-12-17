@@ -1,0 +1,44 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{ typeName: 'Employee',
+                 typeNamePlural: 'Employees',
+                 title:{ label: 'Employee', value: 'LastName' } }
+annotate entity z114_cemp_um with
+{
+  @UI.facet: [{ id: 'employee',
+                type: #IDENTIFICATION_REFERENCE,
+                purpose: #STANDARD,
+                label: 'Employee',
+                position: 10 },
+
+                { id: 'Project',
+                type: #LINEITEM_REFERENCE,
+                purpose: #STANDARD,
+                label: 'Project',
+                position: 20,
+                targetElement: '_proj' }]
+
+  @UI:{ lineItem: [{ position: 10, label: 'EmpId' }],
+        identification: [{ position: 10, label: 'EmpId' }] }
+  EmpId;
+
+  @UI:{ lineItem: [{ position: 20, label: 'FirsTname' }],
+        identification: [{ position: 20, label: 'FirsTname' }] }
+  FirsTname;
+
+  @UI:{ lineItem: [{ position: 30, label: 'LastName' }],
+        identification: [{ position: 30, label: 'LastName' }] }
+  LastName;
+
+  @UI:{ lineItem: [{ position: 40, label: 'Dob' }],
+        identification: [{ position: 40, label: 'Dob' }] }
+  Dob;
+
+  @UI:{ lineItem: [{ position: 50, label: 'Doj' }],
+        identification: [{ position: 50, label: 'Doj' }] }
+  Doj;
+
+  @UI:{ lineItem: [{ position: 60, label: 'Location' }],
+        identification: [{ position: 60, label: 'Location' }] }
+  Location;
+
+}
